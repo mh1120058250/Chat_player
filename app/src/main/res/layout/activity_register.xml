@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.amap.map3d.demo.chat_player.activity.ActivityRegister">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="200dp">
+       <ImageView
+           android:layout_marginTop="20dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:src="@drawable/logo"/>
+   </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="用户名"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/id_UserName_EditText"
+            android:layout_width="150dp"
+            android:singleLine="true"
+            android:textSize="12sp"
+            android:layout_alignParentStart="true"
+            android:layout_height="wrap_content"
+            android:hint="请输入用户名"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="密码"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/id_UserPsw_EditText"
+            android:layout_width="150dp"
+            android:textSize="12sp"
+            android:layout_height="wrap_content"
+            android:hint="请输入密码(数字)"
+            android:inputType="numberPassword"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="确认密码"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/id_UserConfirmPsw_EditText"
+            android:layout_width="150dp"
+            android:textSize="12sp"
+            android:layout_height="wrap_content"
+            android:hint="请确认密码(数字)"
+            android:inputType="numberPassword"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+    <Button
+        android:id="@+id/id_Register_Btn"
+        android:text="注册"
+        android:gravity="center"
+        android:background="#0066ff"
+        android:textColor="#ffffff"
+        android:layout_width="300dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

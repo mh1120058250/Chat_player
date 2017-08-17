@@ -1,0 +1,56 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.0"
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        applicationId "com.amap.map3d.demo.chat_player"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        /**
+         * 解决NewIM SDK 和服务SDK的冲突
+         */
+        packagingOptions{
+            exclude 'META-INF/rxjava.properties'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //bmob-im：特定版本的bmob-im依赖特定版本的bmob-sdk
+    //    compile 'cn.bmob.android:bmob-im:2.0.7@aar'
+    compile 'cn.bmob.android:bmob-sdk:3.5.5'
+    compile 'cn.bmob.android:bmob-im:2.0.7@aar'
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    compile 'eu.the4thfloor.volley:com.android.volley:2015.05.28'
+    compile 'com.android.support:design:26.0.0-alpha1'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'com.github.bumptech.glide:glide:4.0.0-RC1'
+    compile 'com.jakewharton:butterknife:8.7.0'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'cn.yipianfengye.android:zxing-library:2.2'
+    compile 'com.orhanobut:logger:2.1.1'
+    compile 'eu.the4thfloor.volley:com.android.volley:2015.05.28'
+    compile files('libs/Android_Map3D_SDK_V5.2.1_20170630.jar')
+    compile files('libs/AMap_Location_V3.4.1_20170629.jar')
+    compile 'me.imid.swipebacklayout.lib:library:1.0.0'
+    //汉字转拼音
+    compile 'com.github.promeg:tinypinyin:1.0.0'
+    compile 'org.jsoup:jsoup:1.10.3'
+}

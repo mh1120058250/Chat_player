@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#fafbfc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <EditText
+        android:layout_marginTop="5dp"
+        android:hint="请输入用户名"
+        android:id="@+id/id_SearchUser_EditText"
+        android:layout_width="400dp"
+        android:textColor="#0d0d0d"
+        android:layout_height="50dp" />
+    <Button
+        android:layout_marginTop="21dp"
+        android:id="@+id/id_SearchUser_Btn"
+        android:background="@drawable/ask"
+        android:layout_toRightOf="@id/id_SearchUser_EditText"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+    </RelativeLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/id_sw_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ListView
+            android:id="@+id/id_Search_ListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

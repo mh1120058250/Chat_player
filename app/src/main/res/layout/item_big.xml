@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/image_big"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="fitXY"
+        android:layout_alignParentTop="true" />
+
+
+    <TextView
+        android:id="@+id/resourse_big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="网易新闻"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        android:layout_alignBottom="@+id/image_big" />
+
+    <TextView
+        android:id="@+id/title_big"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:text="王宝强新片疑换出品人 新经纪人取代马蓉"
+
+        android:textSize="16sp"
+        android:layout_above="@+id/resourse_big"
+        android:layout_alignStart="@+id/resourse_big" />
+
+    <TextView
+        android:id="@+id/count_big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9999跟帖"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/title_big"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

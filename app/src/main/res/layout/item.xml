@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:descendantFocusability="blocksDescendants"
+    >
+    <ImageView
+        android:layout_width="61dp"
+        android:layout_height="50dp"
+        android:src="@drawable/title"/>
+<TextView
+    android:id="@+id/tv"
+    android:gravity="center_vertical|left"
+    android:orientation="vertical"
+    android:layout_width="200dp"
+    android:layout_height="50dp"
+    android:textSize="22sp"
+    android:textColor="#111211"
+    android:background="#ef7575"
+    android:layout_weight="1.10">
+</TextView>
+    <Button
+        android:id="@+id/btn"
+      android:layout_width="wrap_content"
+      android:layout_height="50dp"
+      android:text="chakan"/>
+</LinearLayout>

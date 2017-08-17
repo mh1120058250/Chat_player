@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.amap.map3d.demo.chat_player.view.SildingFinishLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/chat_main"
+    android:orientation="vertical"
+    android:background="#ededed">
+
+    <include
+        android:id="@+id/up_toolbar"
+        layout="@layout/my_toolbar" />
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/chat_srl"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/bottom"
+        android:layout_below="@id/up_toolbar">
+        <ListView
+            android:id="@+id/text_listView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/bottom"
+            android:dividerHeight="0dp"
+            android:divider="#00000000"
+            android:layout_below="@id/up_toolbar" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#a1a1a1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#cccccc"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <ImageView
+                android:id="@+id/voise_or_keybord"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ask"
+                android:visibility="gone"
+                android:layout_marginLeft="8dp"/>
+
+            <RelativeLayout
+                android:id="@+id/left"
+                android:layout_width="600dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/emo_btn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:visibility="gone"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/biaoping" />
+
+                <Button
+                    android:id="@+id/send_btn"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="#101010"
+                    android:text="发送" />
+
+            <com.amap.map3d.demo.chat_player.view.BackEditText
+                android:id="@+id/chat_edit_view"
+                android:layout_width="410dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/send_btn"
+                android:background="#f10833"
+                android:textSize="18sp"
+                />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#ffffff">
+            <ImageView
+                android:id="@+id/yuyin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/mai"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/paizhao"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/xiangji"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/xiangce"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/xiangpian"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/biaoqing"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/biaoping"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/wenjian"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/wenjian"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/dili"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dili"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/xianshi"
+            android:orientation="horizontal"
+            android:background="#f4f5f7"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.amap.map3d.demo.chat_player.view.AudioRecordButton
+                    android:id="@+id/recordButton"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/maikefen"
+                    >
+                </com.amap.map3d.demo.chat_player.view.AudioRecordButton>
+
+            </RelativeLayout>
+            </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/moer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#cccccc"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/send_img"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="7"
+                    android:src="@drawable/paishe" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="图片"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/send_location"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="7"
+                    android:src="@drawable/dili" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/camera"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="7"
+                    android:src="@drawable/paishe" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="相机"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/text_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/bottom"
+        android:layout_below="@id/up_toolbar"
+        android:orientation="horizontal"/>
+
+</com.amap.map3d.demo.chat_player.view.SildingFinishLayout>
